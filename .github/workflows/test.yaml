@@ -36,7 +36,7 @@ jobs:
       - name: make public dir
         run: mkdir public
       - name: echo hogehoge
-        run: echo hoge >> public/index.html
+        run: echo ${{secrets.TEST_SECRET}} >> public/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
